@@ -100,12 +100,12 @@ export default function SinglePost(){
   
  else { return (
   <div className='return'>
-  <i class="Sad fas fa-meh"></i>
+  <i className="Sad fas fa-meh"></i>
  <p className='text'>You need to register to see the rest of the article </p>
  
  <span className='inscri'>You can register by clicking:</span>
  <br/>
- <Link to={"/register"}><i class="Re fas fa-registered"></i></Link>
+ <Link to={"/register"}><i className="Re fas fa-registered"></i></Link>
  </div>
  
  )}

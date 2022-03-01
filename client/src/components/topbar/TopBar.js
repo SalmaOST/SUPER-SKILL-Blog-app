@@ -32,7 +32,7 @@ export default function TopBar(){
                {
                    user ? (
                <Link to="/settings" >
-               <i class="TopIcon fas fa-user"></i>
+               <i className="TopIcon fas fa-user"></i>
                </Link>
                 ): (
                    <ul className='topList'>

@@ -1,7 +1,7 @@
-import axios from 'axios'
-import React, { useContext, useState }  from 'react'
+
+import React, { useContext}  from 'react'
 import { Context } from '../../../context/Context'
-import Sidebar from '../../sidebar/Sidebar'
+
 import './settings.css'
 
 
@@ -9,9 +9,7 @@ import './settings.css'
 
 export default function Settings(){
     const {user} = useContext(Context)
-    const[file,setFile] = useState(null)
-    const[username,setUsername] = useState("")
-    const[succes,setSuccess] = useState(false)
+    
 
     
 
@@ -24,17 +22,17 @@ export default function Settings(){
                 <form className='settingsForm' >
                     
                    
-                    <label>Username</label>
+                    <label>Username:</label>
                     <input type="text" placeholder={user.username} />
-                    <label>Email</label>
+                    <label>Email:</label>
                     <input type="text"  />
-                    <label>Password</label>
+                    <label>Password:</label>
                     <input type="text"  />
                     
                     
                 </form>
             </div>
-                <Sidebar/>
+           
            
         </div>
     )

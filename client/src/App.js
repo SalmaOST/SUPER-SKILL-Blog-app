@@ -10,7 +10,7 @@ import{
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
+  
 } from 'react-router-dom'
 import { Context } from "./context/Context";
 
