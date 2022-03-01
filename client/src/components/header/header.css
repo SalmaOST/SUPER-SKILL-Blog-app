@@ -1,5 +1,6 @@
 .header{
     margin-top: 60px;
+   
 }
 
 .headerTitles{
@@ -8,25 +9,31 @@
     align-items: center;
     font-family: 'Dancing Script';
     font-weight: 400;
-    color: rgb(151, 147, 147);
+    color: rgb(199, 201, 202);
     font-size: 18px;
 }
 
 .HeaderTitleSm{
     position: absolute ;
-    top: 18%;
-    font-size: 20px
+    top: 53%;
+    font-size: 36px;
+    color: rgb(105, 100, 100);
+    
 }
 
 .HeaderTitleLg{
     position: absolute;
-    top: 20%;
-    font-size: 120px;
+    top: 37%;
+    font-size: 70px;
+    
 }
+
+
 
 .headerImg{
     width: 100%;
     height: 420px;
-    margin-top: 80px;
+    margin-top: 0;
     object-fit: cover;
+    margin-bottom: 20px;
 }

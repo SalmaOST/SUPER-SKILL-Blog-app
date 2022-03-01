@@ -5,6 +5,8 @@
 .singlePostWrapper{
     padding: 20px;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -64,4 +66,69 @@
     font-weight:bolder;
 }
 
+.singlePostTitleInput{
+    text-align: center;
+     margin: 10px;
+     font-family: 'Lora', serif;
+     font-size: 28px;
+     border: none;
+     color: rgb(71, 79, 82);
+     border-bottom: 1px solid lightgray;
+}
+
+.singlePostTitleInput:focus{
+    outline: none;
+}
+
+.singlePostDescInput{
+    border: none;
+    color:rgb(110, 120, 124);
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.singlePostDescInput:focus{
+    outline: none;
+}
+
+.singlePostButton{
+    border: none;
+    background-color: rgb(41, 63, 63);
+    padding: 5px;
+    width: 100px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.text{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(5, 73, 94);
+    
+    
+}
+
+.Sad{
+    font-size: 300px;
+    color: #0a4e43;
+   margin-left: 35%;
+   margin-top: 30px;
+
+}
+
+.Re{
+    font-size: 40px;
+    color: #0f7564;
+   margin-left: 48%;
+  margin-top: 10px;
+}
+
+.inscri{
+    font-size: 30px;
+  margin-left: 34%;
+    color: rgb(6, 102, 131);
+}
 

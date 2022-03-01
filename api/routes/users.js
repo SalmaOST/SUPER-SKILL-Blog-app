@@ -9,8 +9,8 @@ const { json } = require('express');
 router.put('/:id', async (req , res)=>{
     if (req.body.userId === req.params.id){
          if(req.body.password){
-            //const salt = bcrypt.genSalt(10);
-            req.body.password = await bcrypt.hash(req.body.password , 10);
+            //const salt = bcrypt.genSaltSync(10);
+            req.body.password = await bcrypt.hashSync(req.body.password , 10);
         }
     try{
        const updatedUser = await User.findByIdAndUpdate(req.params.id,{

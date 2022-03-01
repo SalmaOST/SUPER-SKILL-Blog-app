@@ -1,36 +1,33 @@
 import React from 'react' 
 import './post.css'
+import {Link} from "react-router-dom"
 
-export default function Post(){
+
+export default function Post({post}){
+    const PF ="http://localhost:4000/images/"
     return(
         <div className='post' >
-          <img className='postImg' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY2REVP0A1uhTaUzRgf4Y2pmo7zsjtVdG7Mg&usqp=CAU' 
-          alt=''/>
+            {post.photo &&(
+               <img 
+                className='postImg'
+                src={PF+post.photo} 
+                alt=''/> 
+            )}
           <div className='postInfo'>
               <div className='postCats'>
-                  <span className='postCat'> Music </span>
-                  <span className='postCat'> Life </span>
+                      {post.categories.map(c=>(
+                           <span className='postCat'> {c.name} </span>
+                      ))}
               </div>
-              <span className='postTitle'>
-                  Loreem 2 djfdjdfv jkvfd;vfbuvjbk 
-              </span>
+              <Link to={`/post/${post._id}`} className="link">
+                 <span className="postTitle">{post.title}</span>
+            </Link>
              <hr/>
-             <span className='PostDate'>1 hour ago </span>
+             <span className='PostDate'>{new Date(post.createdAt).toDateString()} </span>
              <p className='postDesc'>
-                 bdssklfilfsifjsifjisfsiofoisfio
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 juvisdfsdidoifseiofeifeoifenoeifheio  
-                 bdssklfilfsifjsifjisfsiofoisfio
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 juvisdfsdidoifseiofeifeoifenoeifheio  
-                 bdssklfilfsifjsifjisfsiofoisfio
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 jkdsnisdfesoifjewiofjewifhdkvbnoiesdfhirovoisnfhoisfnse
-                 juvisdfsdidoifseiofeifeoifenoeifheio  
-                               
+                 {post.desc}
              </p>
+
 
           </div>
         </div>

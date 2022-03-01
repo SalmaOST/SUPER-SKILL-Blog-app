@@ -1,34 +1,40 @@
+import React, { useContext } from 'react';
 import './topbar.css';
 import {Link} from 'react-router-dom'
+import { Context } from '../../context/Context';
 
 
 export default function TopBar(){
-    const user = false
+    const {user , dispatch } = useContext(Context)
+    const handleLogout =() =>{
+        dispatch({type:"LOGOUT"})
+    }
     return(
         <div className="top">
            <div className='topLeft'>
-           <i class="TopIcon fab fa-facebook-square"></i>
-           <i class="TopIcon fab fa-twitter-square"></i>
-           <i class="TopIcon fab fa-pinterest-square"></i> 
-           <i class="TopIcon fab fa-instagram-square"></i>
+           <a href='https://www.facebook.com/profile.php?id=100001827869009'><i className="TopIcon fab fa-facebook-square"></i></a>
+           <a href='https://twitter.com/SalmaBOmar'><i className="TopIcon fab fa-twitter-square"></i></a>
+           <a href='https://www.pinterest.com/sallatab/_saved/'><i className="TopIcon fab fa-pinterest-square"></i></a>
+           <a href='https://www.instagram.com/_bo.salma/'><i className="TopIcon fab fa-instagram-square"></i></a>
            </div>
            <div className='topCenter'>
                <ul className='topList'>
                <li className='topListItem'>
                    <Link className='link' to='/'>HOME</Link>
                </li>
-                   <li className='topListItem'><Link className='link' to='/'>ABOUT</Link></li>
-                   <li className='topListItem'><Link className='link' to='/'>CONTACT</Link></li>
                    <li className='topListItem'><Link className='link' to='/write'>WRITE</Link></li>
-                   <li className='topListItem'>
-                       {user && 'LOGOUT'}
+                   <li className='topListItem' onClick={handleLogout}>
+                     {user &&  'LOGOUT'} 
                    </li>
                </ul>
            </div>
            <div className='topRight'>
                {
-                   user ? ( <img className='topImg' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmxIH5Bccbn8pi4n50LETfzG4Q0AoZq5hVzw&usqp=CAU' alt=''/>
-                   ): (
+                   user ? (
+               <Link to="/settings" >
+               <i class="TopIcon fas fa-user"></i>
+               </Link>
+                ): (
                    <ul className='topList'>
                        <li className='topListItem'>
                            <Link className='link' to='/login'>LOGIN</Link>
@@ -40,7 +46,6 @@ export default function TopBar(){
                 )}
                
               
-               <i className="TopSearchIcon fas fa-search"></i>
            </div>
 
         </div>

@@ -1,33 +1,36 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useContext, useState }  from 'react'
+import { Context } from '../../../context/Context'
 import Sidebar from '../../sidebar/Sidebar'
 import './settings.css'
 
+
+
+
 export default function Settings(){
+    const {user} = useContext(Context)
+    const[file,setFile] = useState(null)
+    const[username,setUsername] = useState("")
+    const[succes,setSuccess] = useState(false)
+
+    
+
     return(
         <div className='settings'>
             <div className='settingWrapper'> 
                 <div className='settingsTitle'>
-                    <span className='settingsUpdateTitle'>Update your account </span>
-                    <span className='settingsDeleteTitle'>Deelete account </span>
+                    <span className='settingsUpdateTitle'>Account information</span>
                 </div>
-                <form className='settingsForm'>
-                    <label>Profile Picture</label>
-                    <div className='settingsProfilePicture'>
-                        <img 
-                        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8McywWZ3FFJHYZr_nXiSY1_VclLDdwAcXg&usqp=CAU' alt=''/>
-                        <label htmlFor='fileInput'>
-                            <i className="settingPPIcon far fa-user-circle"></i>
-                        </label>
-                        <input type='file' id='fileInput' style={{display:"none"}}/>
-                    </div>
+                <form className='settingsForm' >
+                    
+                   
                     <label>Username</label>
-                    <input type="text" placeholder='Salla'/>
+                    <input type="text" placeholder={user.username} />
                     <label>Email</label>
-                    <input type="email" placeholder='salla@gmail.com'/>
+                    <input type="text"  />
                     <label>Password</label>
-                    <input type="password"/>
-                    <button className='settingSubmit'>Update</button>
-
+                    <input type="text"  />
+                    
                     
                 </form>
             </div>

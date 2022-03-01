@@ -1,5 +1,8 @@
+
+
 .settings{
     display: flex;
+    background-color: rgb(233, 227, 227);
 
 }
 
@@ -17,14 +20,10 @@
 .settingsUpdateTitle{
     font-size: 30px; 
     margin-bottom: 20px;
-    color: lightcoral;
+    color: rgb(72, 70, 92);
 }
 
-.settingsDeleteTitle{
-    color: red;
-    font-size: 12px;
-    cursor: pointer;
-}
+
 
 
 .settingsForm{
@@ -82,10 +81,14 @@
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: teal;
+    background-color: rgb(52, 57, 68);
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
     
 
+}
+
+.settingSubmit:hover{
+    background-color: rgb(175, 223, 223);
 }
