@@ -24,6 +24,7 @@
     font-size: 28px;
 }
 
+
 .singlePostEdit{
     float: right;
     font-size: 16px;
@@ -58,6 +59,7 @@
     color: #666;
     font-size: 18px;
     line-height: 25px;
+    font-family: monospace;
 }
 
 .singlePostDesc::first-letter{

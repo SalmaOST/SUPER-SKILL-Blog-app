@@ -99,14 +99,8 @@ export default function SinglePost(){
 } 
   
  else { return (
-  <div className='return'>
-  <i className="Sad fas fa-meh"></i>
- <p className='text'>You need to register to see the rest of the article </p>
- 
- <span className='inscri'>You can register by clicking:</span>
- <br/>
- <Link to={"/register"}><i className="Re fas fa-registered"></i></Link>
- </div>
+  
+ window.location.replace("/register")
  
  )}
 }

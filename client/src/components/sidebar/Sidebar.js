@@ -19,7 +19,7 @@ export default function Sidebar(){
                 <span className='sidebarTitle'>ABOUT ME </span>
                 <img className='sidebarImg' src='pic.jpg' alt=''/> 
                 <p className='sidebarP'> Creator of this Blog , Salma  is a Senegalese woman , living in a very far country : Kingdom of Saudi Arabia.<br/> She wasn't very glad to study Web development .
-                But with the time learning and also with an amazing and marvelous intructor ; she enjoyed coding . <br/>
+                But with the time learning and also with an amazing and marvelous instructor ; she enjoyed coding . <br/>
                 This little application is her first one , but certainly not the last , she will try to improve her coding quality and design more difficult application.<br/> 
                 Hope you will enjoy and like the application who will decide if she will get certified or not
                  <br/> Thank you.
